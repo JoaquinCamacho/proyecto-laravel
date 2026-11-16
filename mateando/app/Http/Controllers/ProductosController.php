@@ -9,7 +9,7 @@ class ProductosController extends Controller
 {
     public function productos(){
 
-        $products=Product::all();
+        $products = Product::with('category')->get();
 
 
         return view('productos',[
@@ -21,7 +21,7 @@ class ProductosController extends Controller
     public function view(int $id){
 
     return view('detalle',[
-        'product' => Product::findOrFail($id)
+        'product' => Product::with('category')->findOrFail($id)
 
     ]);
 

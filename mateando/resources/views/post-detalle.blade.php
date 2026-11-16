@@ -4,6 +4,9 @@
 
 
 <h1 class="text-4xl">{{$post->titulo}}</h1>
+<p class="mt-2 text-lg">
+    Categoría: {{$post->category->nombre}}
+</p>
 
     <div class="flex flex-col justify-evenly h-50 bg-amber-100 w-fit my-10 rounded-lg shadow-lg">
         <h4>{{$post->contenido}}</h4>

@@ -10,7 +10,7 @@ class PostController extends Controller
 {
     public function post(){
 
-        $posts = Post::all();
+        $posts = Post::with('category')->get();
 
         return view('post', [
         'posts' => $posts
@@ -18,7 +18,7 @@ class PostController extends Controller
     }
     public function view(int $id){
         return view('post-detalle',[
-            'post'=> Post::findOrFail($id)
+            'post'=> Post::with('category')->findOrFail($id)
         ]);
     }
 }

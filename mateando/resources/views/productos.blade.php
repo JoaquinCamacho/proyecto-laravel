@@ -18,6 +18,9 @@
     
         <div class="bg-amber-100 p-6 rounded-xl text-center shadow-lg">
             <h3 class="text-2xl font-bold">{{ $product->nombre}}</h3>
+            <p class="mt-2 text-sm">
+                Categoría: {{ $product->category->nombre }}
+            </p>
             <p class="mt-2 text-lg">{{$product->precio}}</p>
             <p class="mt-4 text-lg font-bold"> Stock: {{$product->stock}}</p>
             <button class="bg-amber-800 text-white px-2 rounded-lg my-4"><a href="{{ route('productos.view', ['id' =>$product->id])}}">Ver</a></button>
