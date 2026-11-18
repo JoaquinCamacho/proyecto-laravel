@@ -23,3 +23,19 @@ Route::get('/blog/{id}',[PostController::class, 'view'])
     ->name('post.view')
     ->whereNumber('id');
 
+Route::get('/admin/posts', [PostController::class, 'admin'])
+    ->name('admin.posts');
+
+Route::get('/admin/posts/crear', [PostController::class, 'create'])
+    ->name('admin.posts.create');
+
+Route::post('/admin/posts/crear', [PostController::class, 'store'])
+    ->name('admin.posts.store');
+
+Route::get('/admin/posts/{id}/editar', [PostController::class, 'edit'])
+    ->name('admin.posts.edit')
+    ->whereNumber('id');
+    
+Route::put('/admin/posts/{id}/editar', [PostController::class, 'update'])
+    ->name('admin.posts.update')
+    ->whereNumber('id');    

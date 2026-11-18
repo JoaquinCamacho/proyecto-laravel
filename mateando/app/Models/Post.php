@@ -11,6 +11,15 @@ class Post extends Model
 
     protected $primaryKey = 'id';
 
+    protected $fillable = [
+    'titulo',
+    'contenido',
+    'autor',
+    'categoria',
+    'category_id',
+    'fecha_publicacion'
+];
+
     public function category(): BelongsTo
     {
         return $this->belongsTo(Category::class);
