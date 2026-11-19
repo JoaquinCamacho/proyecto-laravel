@@ -23,6 +23,7 @@
 
             <x-nav-link route="productos" >Productos</x-nav-link>
             <x-nav-link route="post">Post</x-nav-link>
+            <x-nav-link route="admin.posts">Administrar publicaciones</x-nav-link>
 
             </div>
 

@@ -39,3 +39,7 @@ Route::get('/admin/posts/{id}/editar', [PostController::class, 'edit'])
 Route::put('/admin/posts/{id}/editar', [PostController::class, 'update'])
     ->name('admin.posts.update')
     ->whereNumber('id');    
+
+Route::delete('/admin/posts/{id}', [PostController::class, 'destroy'])
+    ->name('admin.posts.destroy')
+    ->whereNumber('id');    

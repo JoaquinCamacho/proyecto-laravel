@@ -6,6 +6,16 @@
     </h2>
 
 
+    @if($errors->any())
+    <div class="bg-red-200 text-red-800 p-4 rounded-lg mb-4 max-w-xl mx-auto">
+        <ul>
+            @foreach($errors->all() as $error)
+            <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
+
     <form action="{{ route('admin.posts.store') }}" method="POST" class="max-w-xl mx-auto">
 
         @csrf
@@ -22,9 +32,9 @@
         <label>Categoría</label>
         <select name="category_id" class="border p-2 w-full mb-4">
             @foreach($categories as $category)
-                <option value="{{ $category->id }}">
-                    {{ $category->nombre }}
-                </option>
+            <option value="{{ $category->id }}">
+                {{ $category->nombre }}
+            </option>
             @endforeach
         </select>
 

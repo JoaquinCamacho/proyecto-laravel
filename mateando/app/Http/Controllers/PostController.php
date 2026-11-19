@@ -99,6 +99,17 @@ class PostController extends Controller
 
     return redirect()->route('admin.posts')
     ->with('success', '¡Publicación actualizada correctamente!');
-
+    
 }
+
+    public function destroy(int $id)
+    {
+        $post = Post::findOrFail($id);
+
+        $post->delete();
+
+        return redirect()->route('admin.posts')
+        ->with('success', '¡Publicación eliminada correctamente!');
+}
+
 }
