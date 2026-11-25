@@ -23,7 +23,7 @@
             </p>
             <p class="mt-2 text-lg"> ${{$product->precio}}</p>
             <p class="mt-4 text-lg font-bold"> Stock: {{$product->stock}}</p>
-            <button class="bg-amber-500 text-white px-5 py-2 rounded-lg my-4"><a href="{{ route('productos.view', ['id' =>$product->id])}}">Ver</a></button>
+            <button class="bg-amber-500 text-white px-5 py-2 rounded-lg my-4 hover:bg-amber-900"><a href="{{ route('productos.view', ['id' =>$product->id])}}">Ver producto</a></button>
         </div>
         
         

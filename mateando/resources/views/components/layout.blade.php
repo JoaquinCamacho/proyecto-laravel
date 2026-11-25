@@ -14,7 +14,7 @@
 <body class="bg-amber-50">
     
     <div id="app">
-    <nav class="fixed top-0 left-0  w-full flex justify-between items-center p-8 bg-red-950 shadow-lg shadow-amber-500 ">
+    <nav class="fixed top-0 left-0  w-full flex justify-between items-center p-8 bg-red-950 shadow-md shadow-amber-500 ">
 
         <div class="flex items-center w-full">
             <x-nav-link class="text-3xl text-white" route="home">MATEANDO</x-nav-link>
