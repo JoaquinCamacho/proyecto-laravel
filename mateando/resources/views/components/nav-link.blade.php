@@ -1,3 +1,3 @@
-<a href="{{ route($route) }}" class="{{ request()->routeIs($route) ? 'text-amber-300 font-bold' : 'text-white' }}">
+<a href="{{ route($route) }}" {{ $attributes }} class="{{ request()->routeIs($route) ? 'text-amber-500 font-bold' : 'text-white' }}">
     {{ $slot }}
 </a>

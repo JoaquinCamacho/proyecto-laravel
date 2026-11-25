@@ -10,21 +10,21 @@
 
     <div class="mb-10">
         <p>Descubrí nuestra selección de mates artesanales pensados para compartir, disfrutar y acompañar todos los días.  </p>
-        <button class="bg-amber-300 rounded-lg p-2"><a href="{{ route('productos')}}">Ver productos</a></button>
+        <button class="bg-amber-500 rounded-lg p-2"><a href="{{ route('productos')}}">Ver productos</a></button>
     </div>
 
 
     <hr>
 
     <div class="my-10 text-center">
-        <h2 class="text-3xl">Nuestros mates</h2>
-        <h5>Mates seleccionados para cada estilo</h5>
+        <h2 class="text-4xl">Nuestros mates</h2>
+        <h5 class="mt-2">Mates seleccionados para cada estilo</h5>
     </div>
 
     <div class="grid grid-cols-3 gap-6 my-20">
         @foreach($products as $product)
     
-        <div class="bg-amber-100 p-6 rounded-xl text-center shadow-lg">
+        <div class="bg-orange-100 p-6 rounded-xl text-center shadow-lg">
             <h3 class="text-2xl font-bold">{{ $product->nombre}}</h3>
         </div>
         
@@ -46,7 +46,7 @@
     <div class="my-10 text-center">
         <h2 class="text-2xl">Visita nuestro BLOG</h2>
 
-        <button class="bg-amber-300 p-4 rounded-xl mt-10 "><a href="{{route('post')}}">BLOG</a></button>
+        <button class="bg-amber-500 p-4 rounded-xl mt-10 "><a href="{{route('post')}}">BLOG</a></button>
     </div>
 
 </x-layout>

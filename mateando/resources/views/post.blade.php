@@ -2,14 +2,14 @@
 
     <x-slot:title>Blog</x-slot:title>
 
-    <h2 class="text-center text-4xl">Pagina de Blog</h2>
+    <h2 class="text-center text-4xl underline">Pagina de Blog</h2>
 
     
     <div class="grid grid-cols-3 gap-6 my-20">
     
         @foreach($posts as $post)
     
-        <div class="bg-amber-100 p-6 rounded-xl text-center shadow-lg">
+        <div class="bg-amber-500 p-6 rounded-xl text-center shadow-lg">
             <h3 class="text-2xl font-bold">{{ $post->titulo}}</h3>
             <p class="mt-2 text-lg bg-yellow-300 rounded-lg">
                 {{$post->category->nombre}}
