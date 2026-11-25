@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProductosController;
+use App\Http\Controllers\AuthController;
 
 Route::get('/',[HomeController::class, 'index'])
     ->name('home');
@@ -43,3 +44,17 @@ Route::put('/admin/posts/{id}/editar', [PostController::class, 'update'])
 Route::delete('/admin/posts/{id}', [PostController::class, 'destroy'])
     ->name('admin.posts.destroy')
     ->whereNumber('id');    
+
+Route::get('/registro', function () {
+    return view('auth.registro');
+})->name('registro');
+
+Route::post('/registro', [AuthController::class, 'register'])
+    ->name('registro.store');
+
+Route::get('/login', function () {
+    return view('auth.login');
+})->name('login');
+
+Route::post('/login', [AuthController::class, 'login'])
+    ->name('login.store');

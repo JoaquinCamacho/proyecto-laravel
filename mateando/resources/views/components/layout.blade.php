@@ -24,6 +24,7 @@
             <x-nav-link route="productos" >Productos</x-nav-link>
             <x-nav-link route="post">Post</x-nav-link>
             <x-nav-link route="admin.posts">Administrar publicaciones</x-nav-link>
+            <x-nav-link route="login">Iniciar sesión</x-nav-link>
 
             </div>
 
@@ -36,7 +37,7 @@
     
     </main>
 
-    <footer class="bg-amber-900 text-center text-white">
+    <footer class="bg-amber-900 text-center text-white py-5">
         <p>Copyright &copy; ISEC 2024</p>
     </footer>
 </div>
