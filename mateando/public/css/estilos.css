@@ -13,7 +13,7 @@ main {
     flex: 1;
 }
 
-h1,h2,nav{
+h1,h2,nav,label,button  {
   font-family: "Carter One", system-ui;
   font-weight: 400;
   font-style: normal;

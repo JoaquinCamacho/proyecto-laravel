@@ -11,9 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
 </head>
-<body class="bg-amber-50">
+<body class="bg-amber-50 min-h-screen flex flex-col">
     
-    <div id="app">
+    <div id="app" class="flex flex-col flex-1" >
     <nav class="fixed top-0 left-0  w-full flex justify-between items-center p-8 bg-red-950 shadow-md shadow-amber-500 ">
 
         <div class="flex items-center w-full">
@@ -31,14 +31,14 @@
         </div>
     </nav>
 
-    <main class="pt-40 px-4">
+    <main class="pt-40 px-4 flex-1">
 
     <h1>{{$slot}}</h1>
     
     </main>
 
-    <footer class="bg-red-950 text-center text-white p-4">
-        <p>Copyright &copy; ISEC 2024</p>
+    <footer class="bg-red-950 text-center text-white p-4 ">
+        <p>Copyright &copy; ISEC 2026</p>
     </footer>
 </div>
 

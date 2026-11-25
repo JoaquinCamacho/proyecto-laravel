@@ -1,7 +1,7 @@
 <x-layout>
     <x-slot:title>Crear publicación</x-slot:title>
 
-    <h2 class="text-center text-4xl my-10">
+    <h2 class="text-center text-4xl my-5">
         Crear publicación
     </h2>
 
@@ -16,21 +16,21 @@
     </div>
     @endif
 
-    <form action="{{ route('admin.posts.store') }}" method="POST" class="max-w-xl mx-auto">
+    <form action="{{ route('admin.posts.store') }}" method="POST" class="max-w-xl mx-auto shadow-lg py-15 px-5 my-15 bg-orange-100 rounded-2xl">
 
         @csrf
 
         <label>Título</label>
-        <input type="text" name="titulo" class="border p-2 w-full mb-4">
+        <input type="text" name="titulo" class="border rounded-lg p-2 w-full mb-4 focus:border-yellow-400 focus:border-4">
 
         <label>Contenido</label>
-        <textarea name="contenido" class="border p-2 w-full mb-4"></textarea>
+        <textarea name="contenido" class="border rounded-lg p-2 w-full mb-4 focus:border-yellow-400 focus:border-4""></textarea>
 
         <label>Autor</label>
-        <input type="text" name="autor" class="border p-2 w-full mb-4">
+        <input type="text" name="autor" class="border rounded-lg p-2 w-full mb-4 focus:border-yellow-400 focus:border-4"">
 
         <label>Categoría</label>
-        <select name="category_id" class="border p-2 w-full mb-4">
+        <select name="category_id" class="border rounded-lg p-2 w-full mb-4 focus:border-yellow-400 focus:border-4"">
             @foreach($categories as $category)
             <option value="{{ $category->id }}">
                 {{ $category->nombre }}
@@ -39,7 +39,7 @@
         </select>
 
         <label>Fecha de publicación</label>
-        <input type="date" name="fecha_publicacion" class="border p-2 w-full mb-4">
+        <input type="date" name="fecha_publicacion" class="border rounded-lg p-2 w-full mb-4 focus:border-yellow-400 focus:border-4"">
 
         <button type="submit" class="bg-amber-500 p-3 rounded-lg">
             Guardar publicación
